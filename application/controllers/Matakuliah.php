@@ -22,6 +22,9 @@ class Matakuliah extends CI_Controller
 
         if ($this->form_validation->run() != true) {
             $this->load->view('view-form-matakuliah');
+            echo '<script type ="text/JavaScript">';
+            echo 'alert("Kode/Nama MTK terlalu pendek")';
+            echo '</script>';
         } else {
             $data = [
                 'kode' => $this->input->post('kode'),
